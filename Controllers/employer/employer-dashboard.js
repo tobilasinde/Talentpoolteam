@@ -28,6 +28,12 @@ exports.dashboard = async (req, res) => {
         employer_id: req.body.employer_id,
       },
     });
+// All Employees, EmployeeContacted, EmployeeEmployeed and EmployerDetails in dashboard 
+const data = await [
+  { all_employee: allEmployees }, 
+  { employee_contacted: employeeContacted }, 
+  { employee_employed: employeeEmployed }, 
+  { employer_details: employer }];
 
     if (!data) {
       return errorResMsg(res, 404, 'Data not found');
