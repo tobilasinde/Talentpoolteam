@@ -1,4 +1,5 @@
 module.exports = {
+  // EMPLOYER DASHBOARD
   employerDashboard: (req, res) => {
     res.render('Pages/employer-dashboard', {
       success: req.flash('success'),
@@ -6,12 +7,14 @@ module.exports = {
     });
   },
 
+  //GET Employer Profile 
   employerProfile: (req, res) => {
     res.render('Pages/employer-profile-page', {
       pageName: 'Employer Dashboard',
     });
   },
 
+  //Messaging 
   employerMessages: (req, res) => {
     /*//get messages from db
     const url = 'https://api.lancers.app/v1/message/chat-users';
@@ -50,6 +53,7 @@ var getActive = browser.tabs.query({
 getActive.then(getCookie);*/
   },
 
+  // Employer Profile Creation 
   employerCreateProfile: (req, res) => {
     res.render('Pages/employer-profile-creation', {
       success: req.flash('success'),
@@ -58,6 +62,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  // Create Company Profile
   employerCompany: (req, res) => {
     res.render('Pages/employer-company', {
       pageName: 'Company Profile',
@@ -65,6 +70,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  //Documents Upload
   uploaddocsuccess: (req, res) => {
     res.render('Pages/upload-doc-success', {
       pageName: 'Document Uploaded',
@@ -72,6 +78,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  //Fail document and Disapprove 
   uploaddocfailure: (req, res) => {
     res.render('Pages/upload-doc-failure', {
       pageName: 'Document Disapproved',
@@ -79,6 +86,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  //Employer Profile 
   employerProfile: (req, res) => {
     res.render('Pages/employer-profile-page', {
       pageName: 'Profile',
@@ -87,6 +95,7 @@ getActive.then(getCookie);*/
     });
   },
 
+   // Dashboard settings for employer 
   employerDashboardSettings: (req, res) => {
     res.render('Pages/employer-dash-settings.ejs', {
       pageName: 'Employer Dashboard - Settings',
@@ -94,6 +103,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  // Dashboard Support for employer
   employerDashboardSupport: (req, res) => {
     res.render('Pages/employer-dash-support', {
       pageName: 'Employer Dashboard',
@@ -101,6 +111,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  // Employer and Employee Gallary
   employerEmployeeGallery: (req, res) => {
     res.render('Pages/employer-employees-gallery', {
       pageName: 'Employee Gallery',
@@ -108,6 +119,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  // Employer Add Team 
   employerAddTeam: (req, res) => {
     res.render('Pages/employer-add-a-team', {
       pageName: 'Employer - Add Team',
@@ -115,6 +127,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  // Dashboard for Employer
   employerCompanyDashboard: (req, res) => {
     res.render('Pages/employer-company-dashboard', {
       pageName: 'Employer Dashboard',
@@ -122,6 +135,7 @@ getActive.then(getCookie);*/
     });
   },
 
+  // Upload of Certificates
   employerCertificate: (req, res) => {
     res.render('Pages/employer-certificate', {
       pageName: 'Upload Certificate',
